@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Quotes</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tourney&family=Yomogi&display=swap" rel="stylesheet">
+</head>
+<body class="text-center animate__animated animate__bounceInDown">
+  <div class="bg-image"></div>
+  <div class="bg-text">
+    <p id="quote"><%= myObj.quote %></p>
+    <p id="author">By ~ <%= myObj.name %></p>
+    <button type="button" class="btn btn-outline-light btn-lg"><a href="<%= myObj.more %>">More from the Author</a></button>
+    <button type="button" class="btn btn-light btn-lg"><a href="/">Home</a></button>
+    <p class="mt-5 mb-3 text-muted ">&copy; Made with <span class="emoji emoji--happy"></span> by Raunaq Singh</p>
+  </div>
+  <script type="text/javascript">
+    const totalCount = 30;
+    function ChangeIt() {
+      var num = Math.ceil(Math.random() * totalCount);
+      document.body.background = 'images/' + num + '.jpg';
+      document.body.style.backgroundSize = "cover";
+    }
+    ChangeIt();
+  </script>
+</body>
+</html>
